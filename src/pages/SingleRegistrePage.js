@@ -14,7 +14,7 @@ const SingleRegistrePage = () => {
     single_product_error: error,
     single_product: product,
     fetchSingleProduct,
-  } = useProductsContext;
+  } = useProductsContext();
 
   useEffect(() => {
     fetchSingleProduct(`${url}${id}`);
