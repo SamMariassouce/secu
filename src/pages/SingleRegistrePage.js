@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 
 const SingleRegistrePage = () => {
   const { id } = useParams();
+  const history = useHistory();
   const {
     single_product_loading: loading,
     single_product_error: error,
@@ -19,6 +20,20 @@ const SingleRegistrePage = () => {
   useEffect(() => {
     fetchSingleProduct(`${url}${id}`);
   }, []);
+  /* useEffect(() => {
+    if (error) {
+      setTimeout(() => {
+        history.push('/');
+      }, 3000);
+    }
+  }, [error]);
+
+  if (loading) {
+    return <Loading />;
+  }
+  if (error) {
+    return <Error />;
+  } */
 
   return <h4>single registre page</h4>;
 };

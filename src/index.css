@@ -210,3 +210,6 @@ p {
   margin-right: auto;
   height: 150px;
 }
+.error {
+  text-transform: lowercase;
+}
