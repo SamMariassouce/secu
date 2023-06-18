@@ -3,7 +3,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import { useProductsContext } from '../context/products_context';
 import { single_product_url as url } from '../utils/constants';
 import { formatPrice } from '../utils/helpers';
-import { Loading, Error, ProductImages, PageHero } from '../components';
+import { Loading, Error, PageHero } from '../components';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ const SingleRegistrePage = () => {
   useEffect(() => {
     fetchSingleProduct(`${url}${id}`);
   }, []);
-  /* useEffect(() => {
+  useEffect(() => {
     if (error) {
       setTimeout(() => {
         history.push('/');
@@ -33,9 +33,37 @@ const SingleRegistrePage = () => {
   }
   if (error) {
     return <Error />;
-  } */
-
-  return <h4>single registre page</h4>;
+  }
+  const { name, description, price, stock } = product;
+  return (
+    <Wrapper>
+      <PageHero title={name} product />
+      <div className="section section-center page">
+        <Link to="/registre" className="btn btn-single">
+          Retour au registre
+        </Link>
+        <div className="products-center">
+          <section className="content">
+            <h2>{name}</h2>
+            <h5 className="price">{price}</h5>
+            <p className="desc">{description}</p>
+            <p className="info">
+              <span>Anomalie contrat:</span>
+              {stock > 0 ? 'non' : 'oui'}
+            </p>
+            <p className="info">
+              <span>Anomalie rapport:</span>
+              {stock > 0 ? 'non' : 'oui'}
+            </p>
+            <p className="info">
+              <span>Observation:</span>
+              {stock > 0 ? 'non' : 'oui'}
+            </p>
+          </section>
+        </div>
+      </div>
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.main`

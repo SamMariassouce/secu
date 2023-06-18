@@ -6,7 +6,7 @@ import aboutImg from '../assets/map.svg';
 const PlansPage = () => {
   return (
     <main>
-      <PageHero title="Les plans" />
+      <PageHero title="Plans" />
       <Wrapper className="page section section-center">
         <img src={aboutImg} alt="nice illustration" />
         <article>
