@@ -44,7 +44,6 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
-
 /*
 =============== 
 Global Styles
@@ -185,7 +184,7 @@ p {
 }
 .btn:hover {
   color: var(--clr-primary-1);
-  background: var(--clr-primary-7);
+  background: var(--clr-primary-6);
 }
 .title {
   text-align: center;
@@ -204,4 +203,10 @@ p {
 }
 .page {
   min-height: calc(100vh - (20vh + 10rem));
+}
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
 }

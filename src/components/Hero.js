@@ -1,12 +1,26 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import heroBcg from '../assets/hero-bcg.jpeg'
-import heroBcg2 from '../assets/hero-bcg-2.jpeg'
+import React from 'react';
+import styled from 'styled-components';
+/* import { Link } from 'react-router-dom'; */
+import logo from '../assets/logosanstexte.png';
+import heroBcg from '../assets/hero-bcg.svg';
 
 const Hero = () => {
-  return <h4>hero</h4>
-}
+  return (
+    <Wrapper className="section-center">
+      <article className="content">
+        <h1>
+          Ia Ora Na <br />
+          Tatou
+        </h1>
+        <p>Bienvenue sur le site de la sécurité</p>
+        <img src={logo} alt="logo" className="logo" />
+      </article>
+      <article className="img-container">
+        <img src={heroBcg} alt="undraw" className="main-img" />
+      </article>
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.section`
   min-height: 60vh;
@@ -43,7 +57,7 @@ const Wrapper = styled.section`
     }
     .main-img {
       width: 100%;
-      height: 550px;
+      height: 300px;
       position: relative;
       border-radius: var(--radius);
       display: block;
@@ -53,14 +67,14 @@ const Wrapper = styled.section`
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 250px;
+      width: 200px;
       transform: translateX(-50%);
       border-radius: var(--radius);
     }
     .img-container::before {
       content: '';
       position: absolute;
-      width: 10%;
+      width: 0%;
       height: 80%;
       background: var(--clr-primary-9);
       bottom: 0%;
@@ -68,6 +82,6 @@ const Wrapper = styled.section`
       border-radius: var(--radius);
     }
   }
-`
+`;
 
-export default Hero
+export default Hero;
