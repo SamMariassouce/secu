@@ -3,7 +3,12 @@ import styled from 'styled-components';
 import { Filters, ProductList, Sort, PageHero } from '../components';
 
 const RegistrePage = () => {
-  return <h4>registre page</h4>;
+  return (
+    <Wrapper>
+      <PageHero title="Registre" />
+      <h4>registre page</h4>;
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.div`
