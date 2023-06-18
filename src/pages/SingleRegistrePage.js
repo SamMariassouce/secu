@@ -3,18 +3,23 @@ import { useParams, useHistory } from 'react-router-dom';
 import { useProductsContext } from '../context/products_context';
 import { single_product_url as url } from '../utils/constants';
 import { formatPrice } from '../utils/helpers';
-import {
-  Loading,
-  Error,
-  ProductImages,
-  AddToCart,
-  Stars,
-  PageHero,
-} from '../components';
+import { Loading, Error, ProductImages, PageHero } from '../components';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const SingleRegistrePage = () => {
+  const { id } = useParams();
+  const {
+    single_product_loading: loading,
+    single_product_error: error,
+    single_product: product,
+    fetchSingleProduct,
+  } = useProductsContext;
+
+  useEffect(() => {
+    fetchSingleProduct(`${url}${id}`);
+  }, []);
+
   return <h4>single registre page</h4>;
 };
 
