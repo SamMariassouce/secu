@@ -4,10 +4,18 @@ import { Filters, ProductList, Sort, PageHero } from '../components';
 
 const RegistrePage = () => {
   return (
-    <Wrapper>
+    <main>
       <PageHero title="Registre" />
-      <h4>registre page</h4>;
-    </Wrapper>
+      <Wrapper className="page">
+        <div className="section-center registre">
+          <Filters />
+          <div>
+            <Sort />
+            <ProductList />
+          </div>
+        </div>
+      </Wrapper>
+    </main>
   );
 };
 
