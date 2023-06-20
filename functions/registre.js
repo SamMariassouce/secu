@@ -1,6 +1,6 @@
 exports.handler = async (event, context, cb) => {
   return {
     statusCode: 200,
-    body: 'products route',
+    body: 'registre route',
   };
 };
