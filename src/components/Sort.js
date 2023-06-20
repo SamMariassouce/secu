@@ -4,15 +4,30 @@ import { BsFillGridFill, BsList } from 'react-icons/bs';
 import styled from 'styled-components';
 
 const Sort = () => {
-  const { filtered_products: products, grid_view } = useFilterContext();
+  const {
+    filtered_products: products,
+    grid_view,
+    setGridView,
+    setListView,
+    sort,
+    updateSort,
+  } = useFilterContext();
 
   return (
     <Wrapper>
       <div className="btn-container">
-        <button type="button" className={`${grid_view ? 'active' : null}`}>
+        <button
+          type="button"
+          className={`${grid_view ? 'active' : null}`}
+          onClick={setGridView}
+        >
           <BsFillGridFill />
         </button>
-        <button type="button" className={`${!grid_view ? 'active' : null}`}>
+        <button
+          type="button"
+          className={`${!grid_view ? 'active' : null}`}
+          onClick={setListView}
+        >
           <BsList />
         </button>
       </div>
@@ -20,7 +35,13 @@ const Sort = () => {
       <hr />
       <form>
         <label htmlFor="sort">Trier par</label>
-        <select name="sort" id="sort" className="sort-input">
+        <select
+          name="sort"
+          id="sort"
+          className="sort-input"
+          value={sort}
+          onChange={updateSort}
+        >
           <option value="nom-a">nom(a-z)</option>
           <option value="nom-z">nom(z-a)</option>
         </select>
