@@ -38,13 +38,13 @@ exports.handler = async function () {
       };
     });
 
-    console.log('#######');
-    /*  console.log(response); */
-    console.log('#######');
+    /*  console.log('#######');
+    console.log(products);
+    console.log('#######'); */
 
     return {
       statusCode: 200,
-      body: 'products route',
+      body: JSON.stringify(products),
     };
   } catch (error) {
     console.log(error);

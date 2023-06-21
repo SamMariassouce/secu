@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const Product = ({ image, name, price, id }) => {
+const Product = ({ image, name, soustitre, id }) => {
   return (
     <Wrapper>
       <div className="container">
@@ -14,7 +14,7 @@ const Product = ({ image, name, price, id }) => {
       </div>
       <footer>
         <h5>{name}</h5>
-        <p>{price}</p>
+        <p>{soustitre}</p>
       </footer>
     </Wrapper>
   );
