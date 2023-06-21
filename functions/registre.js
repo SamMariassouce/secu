@@ -10,8 +10,36 @@ exports.handler = async function () {
   try {
     const response = await airtable.list({ maxRecords: 200 });
 
+    const products = response.records.map((product) => {
+      const { id, fields } = product;
+      //console.log(fields);
+      const {
+        name,
+        price,
+        description,
+        category,
+        antenne,
+        image,
+        soustitre,
+        anomalie,
+      } = fields;
+      console.log(image);
+      const { url } = image[0];
+      return {
+        id,
+        name,
+        price,
+        antenne,
+        description,
+        category,
+        soustitre,
+        anomalie,
+        image: url,
+      };
+    });
+
     console.log('#######');
-    console.log(response);
+    /*  console.log(response); */
     console.log('#######');
 
     return {
