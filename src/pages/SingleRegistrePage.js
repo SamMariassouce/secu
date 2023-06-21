@@ -34,7 +34,7 @@ const SingleRegistrePage = () => {
   if (error) {
     return <Error />;
   }
-  const { name, description, price, stock } = product;
+  const { name, description, soustitre } = product;
   return (
     <Wrapper>
       <PageHero title={name} product />
@@ -45,19 +45,19 @@ const SingleRegistrePage = () => {
         <div className="products-center">
           <section className="content">
             <h2>{name}</h2>
-            <h5 className="price">{price}</h5>
+            <h5 className="price">{soustitre}</h5>
             <p className="desc">{description}</p>
             <p className="info">
               <span>Anomalie contrat:</span>
-              {stock > 0 ? 'non' : 'oui'}
+              {/* {stock > 0 ? 'non' : 'oui'} */}
             </p>
             <p className="info">
               <span>Anomalie rapport:</span>
-              {stock > 0 ? 'non' : 'oui'}
+              {/* {stock > 0 ? 'non' : 'oui'} */}
             </p>
             <p className="info">
               <span>Observation:</span>
-              {stock > 0 ? 'non' : 'oui'}
+              {/*  {stock > 0 ? 'non' : 'oui'} */}
             </p>
           </section>
         </div>
