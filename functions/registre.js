@@ -15,25 +15,25 @@ exports.handler = async function () {
       //console.log(fields);
       const {
         name,
-        price,
+        diffr,
         description,
         category,
         antenne,
         image,
         soustitre,
-        anomalie,
+        observation,
       } = fields;
       console.log(image);
       const { url } = image[0];
       return {
         id,
         name,
-        price,
+        diffr,
         antenne,
         description,
         category,
         soustitre,
-        anomalie,
+        observation,
         image: url,
       };
     });
