@@ -1,5 +1,5 @@
 import React from 'react';
-import { FeaturedProducts, Hero, Contact } from '../components';
+import { Hero } from '../components';
 const HomePage = () => {
   return (
     <main>
