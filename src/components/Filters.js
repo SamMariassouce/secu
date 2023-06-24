@@ -31,11 +31,11 @@ const Filters = () => {
             />
           </div>
           {/* end of search input */}
-          {/* antenne*/}
+          {/* category*/}
           <div className="form-control">
-            <h5>antennes</h5>
+            <h5>Catégories</h5>
             <div>
-              {antenne.map((c, index) => {
+              {category.map((c, index) => {
                 return (
                   <button
                     key={index}
@@ -52,17 +52,17 @@ const Filters = () => {
               })}
             </div>
           </div>
-          {/* end of antenne */}
-          {/* categories */}
-          {/* <div className="form-control">
-            <h5>Catégories</h5>
+          {/* end of category */}
+          {/* antenne */}
+          <div className="form-control">
+            <h5>Antennes</h5>
             <select
-              name="category"
-              value={category}
+              name="antenne"
+              value={antenne}
               onChange={updateFilters}
-              className="company"
+              className="antenne"
             >
-              {category.map((c, index) => {
+              {antenne.map((c, index) => {
                 return (
                   <option key={index} value={c}>
                     {c}
@@ -70,8 +70,8 @@ const Filters = () => {
                 );
               })}
             </select>
-          </div> */}
-          {/* end of categories */}
+          </div>
+          {/* end of antennes */}
         </form>
       </div>
     </Wrapper>
@@ -111,7 +111,7 @@ const Wrapper = styled.section`
   .active {
     border-color: var(--clr-grey-5);
   }
-  .company {
+  .antenne {
     background: var(--clr-grey-10);
     border-radius: var(--radius);
     border-color: transparent;
@@ -162,7 +162,6 @@ const Wrapper = styled.section`
     text-transform: capitalize;
     column-gap: 0.5rem;
     font-size: 1rem;
-    max-width: 200px;
   }
   .clear-btn {
     background: var(--clr-red-dark);
