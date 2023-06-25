@@ -14,17 +14,19 @@ const PlansPage = () => {
             <h2>les plans</h2>
             <div className="underline"></div>
           </div>
+          <p>Nous avons 2 bibliothèques de plans:</p>
+          <p> Une pour visionner les plans:</p>
+          <a href="https://cps-planlow.netlify.app/" target="_blank">
+            clicquez ici
+          </a>
+          <p> Une autre pour les imprimer:</p>
+          <a href="https://cps-plans.netlify.app/" target="_blank">
+            clicquez Là
+          </a>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-            accusantium sapiente tempora sed dolore esse deserunt eaque
-            excepturi, delectus error accusamus vel eligendi, omnis beatae.
-            Quisquam, dicta. Eos quod quisquam esse recusandae vitae neque
-            dolore, obcaecati incidunt sequi blanditiis est exercitationem
-            molestiae delectus saepe odio eligendi modi porro eaque in libero
-            minus unde sapiente consectetur architecto. Ullam rerum, nemo iste
-            ex, eaque perspiciatis nisi, eum totam velit saepe sed quos
-            similique amet. Ex, voluptate accusamus nesciunt totam vitae esse
-            iste.
+            Attention: Les images de cette bibliothèque ont une très haute
+            résolution. Selon votre débit internet, cela pourrait prendre plus
+            ou moins de temps
           </p>
         </article>
       </Wrapper>

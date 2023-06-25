@@ -12,7 +12,7 @@ const Hero = () => {
           Ia Ora Na <br />
           Tatou
         </h1>
-        <p>Bienvenue sur le site de la sécurité</p>
+        <p>Bienvenue sur le site du service sécurité</p>
         <img src={logo} alt="logo" className="logo" />
       </article>
       <article className="img-container">
