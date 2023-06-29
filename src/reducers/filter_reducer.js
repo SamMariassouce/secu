@@ -15,6 +15,7 @@ const filter_reducer = (state, action) => {
       ...state,
       all_products: [...action.payload],
       filtered_products: [...action.payload],
+      filters: { ...state.filters },
     };
   }
   if (action.type === SET_GRIDVIEW) {
@@ -50,8 +51,15 @@ const filter_reducer = (state, action) => {
     };
   }
   if (action.type === FILTER_PRODUCTS) {
-    /* console.log('filtering'); */
-    return { ...state };
+    const { all_products } = state;
+    const { text, category, observation } = state.filters;
+    let tempProducts = [...all_products];
+    if (text) {
+      tempProducts = tempProducts.filter((registre) => {
+        return registre.name.toLowerCase().startsWith(text);
+      });
+    }
+    return { ...state, filtered_products: tempProducts };
   }
   if (action.type === CLEAR_FILTERS) {
     return {
