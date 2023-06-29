@@ -76,6 +76,13 @@ const filter_reducer = (state, action) => {
       );
     }
 
+    // observation
+    if (observation) {
+      tempProducts = tempProducts.filter(
+        (product) => product.observation === true
+      );
+    }
+
     return { ...state, filtered_products: tempProducts };
   }
   if (action.type === CLEAR_FILTERS) {
