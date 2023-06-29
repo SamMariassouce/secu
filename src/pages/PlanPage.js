@@ -19,7 +19,7 @@ const PlansPage = () => {
             Une pour visionner les plans:
             <br />
             <a href="https://cps-planlow.netlify.app/" target="_blank">
-              clicquez ici
+              cliquez ici
             </a>
           </p>
 
@@ -30,7 +30,7 @@ const PlansPage = () => {
             temps.
             <br />
             <a href="https://cps-plans.netlify.app/" target="_blank">
-              clicquez Là
+              cliquez Là
             </a>
           </p>
         </article>
