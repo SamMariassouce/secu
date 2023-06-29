@@ -6,12 +6,12 @@ import { FaCheck } from 'react-icons/fa';
 
 const Filters = () => {
   const {
-    filters: { text },
+    filters: { text, antenne },
     updateFilters,
     all_products,
   } = useFilterContext();
 
-  const antenne = getUniqueValues(all_products, 'antenne');
+  const antennes = getUniqueValues(all_products, 'antenne');
   const category = getUniqueValues(all_products, 'category');
 
   console.log(category);
@@ -62,7 +62,7 @@ const Filters = () => {
               onChange={updateFilters}
               className="antenne"
             >
-              {antenne.map((c, index) => {
+              {antennes.map((c, index) => {
                 return (
                   <option key={index} value={c}>
                     {c}
