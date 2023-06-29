@@ -16,10 +16,10 @@ const PlansPage = () => {
           </div>
           <p>Nous avons 2 bibliothèques de plans:</p>
           <p>
-            Une pour visionner les plans:
+            Une pour visionner les plans.
             <br />
             <a href="https://cps-planlow.netlify.app/" target="_blank">
-              cliquez ici
+              Cliquez ici
             </a>
           </p>
 
@@ -30,7 +30,7 @@ const PlansPage = () => {
             temps.
             <br />
             <a href="https://cps-plans.netlify.app/" target="_blank">
-              cliquez Là
+              Cliquez Là
             </a>
           </p>
         </article>
