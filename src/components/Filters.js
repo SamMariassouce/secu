@@ -32,6 +32,25 @@ const Filters = () => {
             />
           </div>
           {/* end of search input */}
+          {/* antenne */}
+          <div className="form-control">
+            <h5>Antennes</h5>
+            <select
+              name="antenne"
+              value={antenne}
+              onChange={updateFilters}
+              className="antenne"
+            >
+              {antennes.map((c, index) => {
+                return (
+                  <option key={index} value={c}>
+                    {c}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+          {/* end of antennes */}
           {/* category*/}
           <div className="form-control">
             <h5>Catégories</h5>
@@ -54,25 +73,6 @@ const Filters = () => {
             </div>
           </div>
           {/* end of category */}
-          {/* antenne */}
-          <div className="form-control">
-            <h5>Antennes</h5>
-            <select
-              name="antenne"
-              value={antenne}
-              onChange={updateFilters}
-              className="antenne"
-            >
-              {antennes.map((c, index) => {
-                return (
-                  <option key={index} value={c}>
-                    {c}
-                  </option>
-                );
-              })}
-            </select>
-          </div>
-          {/* end of antennes */}
           {/* observation */}
           <div className="form-control shipping">
             <label htmlFor="observation">observation</label>

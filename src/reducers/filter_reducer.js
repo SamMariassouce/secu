@@ -52,18 +52,27 @@ const filter_reducer = (state, action) => {
   }
   if (action.type === FILTER_PRODUCTS) {
     const { all_products } = state;
-    const { text, category, observation } = state.filters;
+    const { text, category, antenne, observation } = state.filters;
     let tempProducts = [...all_products];
+
+    // text filtering
 
     if (text) {
       tempProducts = tempProducts.filter((registre) => {
         return registre.name.toLowerCase().startsWith(text);
       });
     }
+    // category filtering
 
     if (category !== 'all') {
       tempProducts = tempProducts.filter(
         (product) => product.category === category
+      );
+    }
+    // antenne filtering
+    if (antenne !== 'all') {
+      tempProducts = tempProducts.filter(
+        (product) => product.antenne === antenne
       );
     }
 
