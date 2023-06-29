@@ -6,9 +6,10 @@ import { FaCheck } from 'react-icons/fa';
 
 const Filters = () => {
   const {
-    filters: { text, antenne },
+    filters: { text, antenne, observation },
     updateFilters,
     all_products,
+    clearFilters,
   } = useFilterContext();
 
   const antennes = getUniqueValues(all_products, 'antenne');
@@ -72,7 +73,22 @@ const Filters = () => {
             </select>
           </div>
           {/* end of antennes */}
+          {/* observation */}
+          <div className="form-control shipping">
+            <label htmlFor="observation">observation</label>
+            <input
+              type="checkbox"
+              name="observation"
+              id="observation"
+              onChange={updateFilters}
+              checked={observation}
+            />
+          </div>
+          {/* end of observation */}
         </form>
+        <button type="button" className="clear-btn" onClick={clearFilters}>
+          effacer les filtres
+        </button>
       </div>
     </Wrapper>
   );

@@ -53,6 +53,17 @@ const filter_reducer = (state, action) => {
     /* console.log('filtering'); */
     return { ...state };
   }
+  if (action.type === CLEAR_FILTERS) {
+    return {
+      ...state,
+      filters: {
+        text: '',
+        category: 'all',
+        antenne: 'all',
+        observation: false,
+      },
+    };
+  }
   throw new Error(`No Matching "${action.type}" - action type`);
 };
 
