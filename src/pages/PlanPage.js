@@ -15,18 +15,23 @@ const PlansPage = () => {
             <div className="underline"></div>
           </div>
           <p>Nous avons 2 bibliothèques de plans:</p>
-          <p> Une pour visionner les plans:</p>
-          <a href="https://cps-planlow.netlify.app/" target="_blank">
-            clicquez ici
-          </a>
-          <p> Une autre pour les imprimer:</p>
-          <a href="https://cps-plans.netlify.app/" target="_blank">
-            clicquez Là
-          </a>
           <p>
-            Attention: Les images de cette bibliothèque ont une très haute
-            résolution. Selon votre débit internet, cela pourrait prendre plus
-            ou moins de temps
+            Une pour visionner les plans:
+            <br />
+            <a href="https://cps-planlow.netlify.app/" target="_blank">
+              clicquez ici
+            </a>
+          </p>
+
+          <p>
+            Une autre pour les imprimer: <br />
+            les images de cette bibliothèque ont une très haute résolution.
+            Selon votre débit internet, cela pourrait prendre plus ou moins de
+            temps.
+            <br />
+            <a href="https://cps-plans.netlify.app/" target="_blank">
+              clicquez Là
+            </a>
           </p>
         </article>
       </Wrapper>
