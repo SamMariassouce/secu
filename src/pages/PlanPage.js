@@ -18,7 +18,11 @@ const PlansPage = () => {
           <p>
             Une pour visionner les plans.
             <br />
-            <a href="https://cps-planlow.netlify.app/" target="_blank">
+            <a
+              href="https://cps-planlow.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Cliquez ici
             </a>
           </p>
@@ -29,7 +33,11 @@ const PlansPage = () => {
             Selon votre débit internet, cela pourrait prendre plus ou moins de
             temps.
             <br />
-            <a href="https://cps-plans.netlify.app/" target="_blank">
+            <a
+              href="https://cps-plans.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Cliquez Là
             </a>
           </p>
